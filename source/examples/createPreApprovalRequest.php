@@ -110,7 +110,7 @@ class CreatePreApprovalRequest
              * You can also get your credentials from a config file. See an example:
              * $credentials = PagSeguroConfig::getAccountCredentials();
              */
-            $credentials = new PagSeguroAccountCredentials("felipe.neuhauss@gmail.com", "200E09FE6C9E4965B5FD1A088650912C");
+            $credentials = new PagSeguroAccountCredentials("your@email.com", "your_token_here");
             // Register this payment request in PagSeguro, to obtain the payment URL for redirect your customer.
             $url = $paymentRequest->register($credentials);
 
