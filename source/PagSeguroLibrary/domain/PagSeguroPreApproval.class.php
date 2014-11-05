@@ -4,6 +4,7 @@
  @author: felipe.neuhauss@gmail.com
  @version: 1.0
  @description: Classe criada para gerar pagamento recorrente
+ @site: felipeneuhauss.github.io
 */
 
 /**

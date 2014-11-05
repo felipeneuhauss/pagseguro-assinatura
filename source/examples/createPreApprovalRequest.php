@@ -43,7 +43,7 @@ class CreatePreApprovalRequest
                 $paymentRequest->addItem('0001', 'Assinatura mensal', 1, $value);
                 $preApproval->setAmountPerPayment($value)
                     ->setMaxAmountPerPeriod($value)->setPeriod('MONTHLY')->setDayOfMonth($dayOfMonth)
-                    ->setName('Assinatura do plano mensal do aplicativo Izie')
+                    ->setName('Assinatura do plano mensal ')
                     ->setMaxTotalAmount($value * 12)
                     ->setDetails('Todo mês será cobrado o valor referente ao plano na data de adesão')
                     ->setInitialDate(date('Y-m-d\TH:i:s'))->setFinalDate(date('Y-m-d\TH:i:s', strtotime('+12 month')));
@@ -59,7 +59,7 @@ class CreatePreApprovalRequest
                     ->setMaxAmountPerPeriod($value * 4)
                     ->setMaxTotalAmount($value * 4)
                     ->setPeriod('SEMIANNUALLY')->setDayOfMonth($dayOfMonth)
-                    ->setName('Assinatura do plano semestral do aplicativo Izie')
+                    ->setName('Assinatura do plano semestral ')
                     ->setDetails('A cada 6 meses será cobrado o valor referente ao plano na data de adesão')
                     ->setInitialDate(date('Y-m-d\TH:i:s'))->setFinalDate(date('Y-m-d\TH:i:s', strtotime('+24 month')));
                 break;
@@ -80,7 +80,7 @@ class CreatePreApprovalRequest
                     ->setMaxAmountPerPeriod($value * 2)
                     ->setMaxTotalAmount($value * 2)
                     ->setPeriod('YEARLY')->setDayOfYear($month.'-'.$dayOfMonth)
-                    ->setName('Assinatura do plano anual do aplicativo Izie')
+                    ->setName('Assinatura do plano anual ')
                     ->setDetails('Todo ano será cobrado o valor referente ao plano na data de adesão')
                     ->setInitialDate(date('Y-m-d\TH:i:s'))->setFinalDate(date('Y-m-d\TH:i:s', strtotime('+24 month')));
                 break;
@@ -92,12 +92,12 @@ class CreatePreApprovalRequest
 
         // Sets your customer information.
         $paymentRequest->setSender(
-            'Daphynne Crispim',
-            'miss.dap@gmail.com',
+            'Fulano',
+            'example@email.com',
             '61',
-            '82006226',
+            '00000000',
             'CPF',
-            '019.997.181-19'
+            '999.999.999-99'
         );
 
         // Sets the url used by PagSeguro for redirect user after ends checkout process
